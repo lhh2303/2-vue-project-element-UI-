@@ -11,7 +11,9 @@ import axios from 'axios'
 Vue.prototype.$http = axios
 // 请求根路径
 axios.defaults.baseURL ='https://www.liulongbin.top:8888/api/private/v1/'
-
+// 树
+import tree from 'vue-table-with-tree-grid'
+Vue.component('tree', tree)
 // 拦截器
 axios.interceptors.request.use(config => {
   console.log(config)
